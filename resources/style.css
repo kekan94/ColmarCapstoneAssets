@@ -2,10 +2,11 @@ html {
     font-size: 16px; 
     font-weight: normal; 
     font-family: 'Open Sans', sans-serif;
+    border: 2px solid darkgray; 
 }
 
 body {
-    border: 1px solid darkgray; 
+    margin: 0;
 }
 
 h1 {
@@ -16,11 +17,16 @@ h1 {
 
 header {
     height: 4rem;
-    margin: 1rem 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: rgb(58, 56, 56);
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+    padding: 1rem 1.5rem;
 }
 
 .child {
@@ -34,12 +40,9 @@ header {
     font-size: 1.5rem;
 }
 
-.child span:last-child {
-    margin-right: 0;
-}
-
 .child h2 {
     font-weight: bold;
+    margin: 0;
 }
 
 .child h2 span {
@@ -55,6 +58,12 @@ header {
 
 /*Main*/
 
+main {
+    position: relative;
+    top: 4rem;
+    padding-bottom: 5.35rem;
+}
+
 /*Banner*/
 
 #banner {
@@ -67,7 +76,7 @@ header {
 #banner img {
     width: 60%;
     height: auto;
-    padding: 2rem 1.5rem;
+    margin: 2rem 1.5rem 2rem 1.5rem;
 }
 
 .banner-information {
@@ -147,7 +156,7 @@ header {
 #information .side {
     margin-top: 1px;
     border-left: 1px solid lightgray;
-    padding: 1rem 1.5rem 2rem 0;
+    padding: 1rem 0 2rem 0;
 }
 
 .thesis .side {
@@ -157,7 +166,7 @@ header {
 #information .side1, .thesis .side1 {
     display: inline-flex;
     align-items: center;
-    padding: 1rem 0 1rem 1rem;
+    padding: 1rem 1.5rem 1rem 1rem;
     margin-bottom: 1px;
 }
 
@@ -253,10 +262,12 @@ header {
 /*Footer*/
 
 footer {
+    position: relative;
+    bottom: 0;
     color: rgb(118, 118, 118);
     display: flex;
     justify-content: space-between;
-    padding: 1rem 1.5rem 3rem 1.5rem;
+    padding: 0 1.5rem 3rem 1.5rem;
 }
 
 span:first-child {
