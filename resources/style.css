@@ -2,15 +2,20 @@ html {
     font-size: 16px; 
     font-weight: normal; 
     font-family: 'Open Sans', sans-serif;
-    border: 2px solid darkgray; 
 }
 
 body {
-    margin: 0;
+    margin: 0; 
 }
 
 h1 {
     font-size: 2.75rem;
+}
+
+/*Desktop*/
+
+.mobile-header, .mobile-information {
+    display: none;
 }
 
 /*Header*/
@@ -58,10 +63,11 @@ header {
 
 /*Main*/
 
-main {
+#main {
     position: relative;
     top: 4rem;
     padding-bottom: 5.35rem;
+    border: 2px solid darkgray;
 }
 
 /*Banner*/
@@ -188,10 +194,15 @@ main {
     background-color: lightgray;
 }
 
-#information .side1 img, .thesis .side1 img {
+#information .side1 .desktop-information, .thesis .side1 img {
     width: 35%;
     height: auto;
     margin-right: 1rem;
+}
+
+.desktop-information img {
+    width: 100%;
+    height: auto;
 }
 
 #information .side1 .side2 {
@@ -276,4 +287,204 @@ span:first-child {
 
 h4 {
     margin: 0;
+}
+
+/*Mobile*/
+
+@media only screen and (max-width: 800px) {
+    .child, #information .main, .thesis .side, .thesis h1, .thesis h2, .desktop-information, .learn img, .learn h3, footer span {
+        display: none;
+    }
+
+    body {
+        display: block;
+    }
+    
+    .child {
+        display: none;
+    }
+    
+    .mobile-header {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-around;
+        height: 4rem;
+        box-sizing: border-box;
+        align-items: center;
+        background-color: white;
+        position: fixed;
+        z-index: 10;
+        padding: 1rem;
+        right: 0;
+    }
+
+    .mobile-header img {
+        height: 2rem;
+        width: auto;
+    }
+
+    #main {
+        padding-bottom: 4.5rem;
+    }
+
+    /*Banner*/
+
+    #banner {
+        background-color: lightgray;
+        display: block;
+    }
+    
+    #banner img {
+        width: 100%;
+        height: auto;
+        margin: 0 0 2rem 0;
+    }
+     
+    .banner-information {
+        padding: 0 1rem 2rem 1rem;
+        display: block;
+        margin: 0;
+    }
+    
+    .banner-information h3 {
+        padding: 0;
+        background-color: rgb(114, 114, 114);
+        color: white;
+        text-align: center;
+    }
+    
+    .banner-information h1, .banner-information h2 {
+        text-align: justify;
+        color: rgb(58, 56, 56);
+    }
+
+    .banner-information h1 {
+        margin: 0 0 2rem 0;
+    }
+
+    .banner-information h2 {
+        margin: 0 0 1.5rem 0;
+    }
+
+    .banner-information h3 {
+        margin: 0;
+        padding: 1rem 0;
+    }
+
+    /*Learn + Thesis*/
+
+    #information .side, .thesis .main {
+        width: 100%;
+        display: block;
+        color:rgb(118, 118, 118);
+    }
+    
+    #thesis {
+        border: none;
+    }
+
+    #thesis h1 {
+        padding: 0;
+        margin: 2rem 0 1rem 0;
+    }
+
+    .thesis .main {
+        padding: 0;
+    }
+
+    .thesis .main video {
+        width: 100%;
+        height: auto;
+    }
+
+    #information .side {
+        margin: 0;
+        border: none;
+        padding: 1rem 1rem 0 1rem;
+    }
+
+    #information .side1 {
+        display: block;
+        padding: 0 0 4rem 0;
+        margin: 0;
+    }
+
+    #information .side1:last-child {
+        background-color: white;
+        padding-bottom: 2rem;
+    }
+
+    .thesis .side1:first-child {
+        background-color: lightgray;
+    }
+
+    #information .side1 .mobile-information, .thesis .side1 img {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+    
+    .mobile-information img {
+        width: 100%;
+        height: auto;
+    }
+
+    #information .side1 .side2 {
+        display: block;
+        width: 100%;
+    }
+    
+    #information .side1 .side2 h2, .thesis .side1 .side2 h2 {
+        font-weight: bold;
+        margin: 2rem 1rem 0.5rem 1rem;
+        color: rgb(58, 56, 56);
+    }
+    
+    #information .side1 .side2 h3, .thesis .side1 .side2 h2 {
+        margin: 0.5rem 1rem;
+    }
+    
+    #information .side1 .side2 a  {
+        margin: 0 1rem;
+        color: blue;
+    }
+
+    /*Learn*/
+
+    #learn, .learn {
+        display: block;
+    }
+
+    #learn {
+        background-color: white;
+    }
+
+    #learn h1 {
+        padding: 2rem 0 0 0;
+    }
+
+    #learn h2 {
+        background-color: lightgray;
+        text-align: center;
+        padding: 1rem 1rem 1.5rem 1rem;
+        margin: 0 0 0.5rem 0;
+    }
+
+    .learn {
+        padding: 1rem 1rem 1.5rem 1rem;
+        border-bottom: 1px solid lightgray;
+    }
+
+    .area {
+        width: 100%;
+        margin: 0;
+    }
+
+    /*Footer*/
+
+    footer {
+        padding: 2.5rem 1rem 1rem 1rem;
+        bottom: 1rem;
+    }
 }
