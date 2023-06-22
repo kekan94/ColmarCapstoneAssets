@@ -163,6 +163,7 @@ header {
     margin-top: 1px;
     border-left: 1px solid lightgray;
     padding: 1rem 0 2rem 0;
+    border-bottom: 1px solid lightgray;
 }
 
 .thesis .side {
@@ -192,6 +193,7 @@ header {
 #information .side1:last-child {
     margin-top: -1px;
     background-color: lightgray;
+    border: none;
 }
 
 #information .side1 .desktop-information, .thesis .side1 img {
@@ -371,7 +373,7 @@ h4 {
         padding: 1rem 0;
     }
 
-    /*Learn + Thesis*/
+    /*Information + Thesis*/
 
     #information .side, .thesis .main {
         width: 100%;
@@ -399,8 +401,7 @@ h4 {
 
     #information .side {
         margin: 0;
-        border: none;
-        padding: 1rem 1rem 0 1rem;
+        padding: 1rem 1rem 2rem 1rem;
     }
 
     #information .side1 {
@@ -411,7 +412,7 @@ h4 {
 
     #information .side1:last-child {
         background-color: white;
-        padding-bottom: 2rem;
+        padding-bottom: 0;
     }
 
     .thesis .side1:first-child {
@@ -440,7 +441,7 @@ h4 {
         margin: 2rem 1rem 0.5rem 1rem;
         color: rgb(58, 56, 56);
     }
-    
+
     #information .side1 .side2 h3, .thesis .side1 .side2 h2 {
         margin: 0.5rem 1rem;
     }
@@ -481,6 +482,10 @@ h4 {
         margin: 0;
     }
 
+    .area:last-child h2 {
+        margin-bottom: 0 !important;
+    }
+    
     /*Footer*/
 
     footer {
